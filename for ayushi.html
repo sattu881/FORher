@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For Ayushi ❤️</title>
+  <style>
+    body {
+      background: radial-gradient(#ffd6e8, #ffeef5);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff2d55;
+      margin-bottom: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    button {
+      background-color: #ff2d55;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1em;
+      border-radius: 30px;
+      margin: 20px 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #e91e63;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .signature {
+      font-size: 1.5em;
+      color: #ff2d55;
+      margin-top: 60px;
+      text-shadow: 0 0 8px #ff6f91, 0 0 16px #ff6f91;
+      animation: glow 2s ease-in-out infinite alternate;
+      font-style: italic;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 8px #ff6f91, 0 0 16px #ff6f91;
+      }
+      to {
+        text-shadow: 0 0 12px #ff2d55, 0 0 24px #ff2d55;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>For Ayushi 💖</h1>
+
+  <p>
+    I LOVEEEE YOUU SOOOO MUCHHHH AND I promise to be with you forever and ever.  
+    I'm so happy that you are in my life — it feels amazing to have you.  
+    Haan bahaut natak karti hai but hai bhi toh meri hee at the end 😌  
+    (Zyada mat karna warna subah-subah tere upar kud jaunga 😤😂)  
+    And now i dont have words to describe you so yea… this song perfectly describes you 💕
+  </p>
+
+  <button onclick="playSong()">Click to hear the song</button>
+  <button onclick="stopSong()">Stop Song</button>
+
+  <audio id="kesariya" src="kesariya.mp3" preload="auto"></audio>
+
+  <div class="signature">From your sharmalu 💕</div>
+
+  <script>
+    const audio = document.getElementById("kesariya");
+
+    function playSong() {
+      audio.play().catch(err => {
+        alert("Audio play failed. Maybe the browser blocked it.");
+        console.log(err);
+      });
+    }
+
+    function stopSong() {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  </script>
+
+</body>
+</html>
